@@ -1,0 +1,3 @@
+Aho-Corasick = O objetivo do algoritmo é localizar todas as palavras chaves em textos, a partir de uma única interação, utilizando para tanto um dicionário contendo um conjunto finito de palavras chaves. A complexidade do algoritmo é linear.
+
+Trigrams = Um trigrama processa o documento utilizando 3 caracteres, sendo a palavra "Teste" na primeira interação, vai ser TES, EST, STE TE_ T__, sendo seguido das próximas palavras, sendo assim, ao comparar documentos, ele retorna um valor que é a quantidade de palavras que são parecidas, e as que são iguais.

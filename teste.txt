@@ -1,0 +1,79 @@
+Indexar um texto. Escrever um programa que lê um arquivo texto de entrada e coloca, em ordem alfabética, as
+palavras e as linhas que cada palavra aparece (ignorando maiúscula/minúscula e pontuação. Ignore palavras com
+menos de 2 letras) 
+
+Segue o texto aleatório abaixo, contendo Livros do Olavo de Carvalho, strings aleatórias, e alguns dos filmes que eu recomendo ;)
+
+-------------------Livros-------------------
+
+O imbecil Coletivo
+Apoteose da Vigarice
+O mundo como jamais funcionou
+A fórmula para enlouquecer o mundo
+A inversão revolucionária em ação
+O império mundial da burla
+O dever de insultar
+Histéricos no poder
+A nova era e a revolução culural
+Os EUA e a Nova Ordem Mundial
+O minimo que você precisa saber para não ser um idiota
+O futuro do pensamento brasileiro
+O jardim das aflições
+A dialética simbólica
+A filosofia e seu inverso
+Visões de Descartes
+Maquiavel ou A Confusão Demoníaca?
+
+-------------------Strings-------------------
+
+./.;l;l
+aa
+aaa
+abba
+Menino maico mancou mancado marcou
+o rato roeu a roupa do rei de roma
+aaaaaaaaa eu vou piiiii (censurado)!!!!!!!./
+f;ádslk'fasijeaaaaaaaaa
+para para para para para para PARA TUDO!
+O Kawamoto roubou pão na casa do jOão!
+O Kawamoto roubou pão na casa do joãO!
+Quem eu?
+Sim você!
+Eu não!
+Então quem foi?
+O Henriko roubou pão na casa do João!!!
+(Mas rapaz, isso funciona que é uma belaza meu consagrado!!!!!)asihjgfaslojghals;
+¤p9531 9y[809bvgh;iou2trfy-908sweg y208y3r opus
+
+-------------------Filmes-------------------
+
+Crime:
+The Commuter
+Game Night
+The Foreigner
+Logan Lucky
+American Made
+War Dogs
+Shotcaller
+The Big Short
+The Accountant
+The Girl with the Dragon Tattoo
+The Usual Suspects
+The Lincoln Lawyer
+
+Comédia:
+Gringo
+
+Triste:
+Bomb City
+The Land Of Steady Habits
+Dallas Buyers Club
+
+Suspense:
+Split
+The Revenant
+Nightcrawler
+
+Ação:
+Predestination
+
