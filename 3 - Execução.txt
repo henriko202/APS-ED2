@@ -1,5 +1,5 @@
 Foi implementado o algorítmo de indexação de texto, parecido com o Aho-Corasick, porém diferente, já que o Aho é utilizado para achar palavras chaves, etc etc, o algorítmo implementado lê um arquivo de texto, coloca em uma PATRICIA Trie todas as palavras com suas respectivas chaves, e as linhas em que essa palavra aparece, logo em seguida ele organiza por ordem alfabética essas palavras e coloca em um arquivo chamado output.txt, além de mostrar na tela as palavras com as chaves, e logo em seguida, as palavras organizadas.
 
-A aplicação deve ser usada por java -jar <nome_do_arquivo_java> <entrada.txt>
+A aplicação deve ser usada por java -jar APS-ED2.jar <entrada.txt>
 
 O teste de conformidade feito pode ser observado pelo teste.txt, que é o arquivo de entrada e o seu resultado em output.txt
