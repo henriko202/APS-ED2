@@ -31,7 +31,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 //		para testes, comente as próximas 4 linhas
 		if (args.length == 0 || args.length != 1) {
-			System.out.println("Execução: java -jar nome_do_arquivo_java <arquivo.txt>");
+			System.out.println("Execução: java -jar " + System.getProperty("java.class.path") + " <arquivo.txt>");
 			System.exit(-1);
 		}
 

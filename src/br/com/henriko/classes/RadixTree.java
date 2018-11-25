@@ -30,70 +30,6 @@ public class RadixTree<T> {
 	}
 
 	/**
-	 * Hmmm, não sei o que esse método faz, to com uma dúvida.... JÁ SEI, ACHO QUE
-	 * ELE MEDE A ÁRVORE!! nao nao... ele deleta, foi mal...<br>
-	 * Agradeço novamente ao Jão que me ajudou nisso, não ia saber utilizar todo o
-	 * potencial do {@link Visitor}
-	 * 
-	 * @param key chave para ser deletada
-	 * @return
-	 */
-	public boolean delete(String key) {
-		Visitor<T, Boolean> visitor = new VisitorImpl<T, Boolean>(Boolean.FALSE) {
-			public void visit(String key, RadixTreeNode<T> pai, RadixTreeNode<T> node) {
-
-				if (node.isReal()) {
-
-//					 se não tem filhos, deleta o nó
-					if (node.getFilho().size() == 0) {
-						Iterator<RadixTreeNode<T>> it = pai.getFilho().iterator();
-						while (it.hasNext()) {
-							if (it.next().getKey().equals(node.getKey())) {
-								it.remove();
-								break;
-							}
-						}
-
-//						Se o pai não é real e tem só um filho, merge eles
-						if (pai.getFilho().size() == 1 && pai.isReal() == false) {
-							mergeNodes(pai, pai.getFilho().get(0));
-						}
-					} else if (node.getFilho().size() == 1) {
-
-//						precisa dar merge no unico filho do nó com eles mesmo
-						mergeNodes(node, node.getFilho().get(0));
-					} else {
-//						só marca coimo não real
-						node.setReal(false);
-					}
-				}
-			}
-
-			/**
-			 * Dá um merge do filho no pai, só se for o unico filho e o pai não for real
-			 * Como o merge só é usado na deleção, foi declarado aqui
-			 * 
-			 * @param pai
-			 * @param filho
-			 */
-			private void mergeNodes(RadixTreeNode<T> pai, RadixTreeNode<T> filho) {
-				pai.setKey(pai.getKey() + filho.getKey());
-				pai.setReal(filho.isReal());
-				pai.setValue(filho.getValue());
-				pai.setFilho(filho.getFilho());
-			}
-
-		};
-
-		visit(key, visitor);
-
-		if (visitor.getResult()) {
-			size--;
-		}
-		return visitor.getResult().booleanValue();
-	}
-
-	/**
 	 * Método usado para inserir, que vai chamar outro método, linkando com a raiz
 	 * 
 	 * @param key   chave, é utilizado o mesmo valor do value, pois na inserção ele
@@ -202,44 +138,6 @@ public class RadixTree<T> {
 			node.setValue(value);
 
 			node.getFilho().add(n);
-		}
-	}
-
-	/**
-	 * Visita o node que tem a key igual
-	 * 
-	 * @param key
-	 * @param visitor
-	 */
-	public <R> void visit(String key, Visitor<T, R> visitor) {
-		if (root != null) {
-			visit(key, visitor, null, root);
-		}
-	}
-
-	/**
-	 * Recursivamente acha o nó que tem a chave igual o prefixo
-	 * 
-	 * @param prefix  Prefixo, uai
-	 * @param visitor Usado para recursão
-	 * @param node    No usado para procurar mais a fundo
-	 */
-	private <R> void visit(String prefix, Visitor<T, R> visitor, RadixTreeNode<T> pai, RadixTreeNode<T> node) {
-
-		int charsIguais = node.getCharsIguais(prefix);
-
-//		se forem iguais, é factível chegamos no lugar, trivial isso
-		if (charsIguais == prefix.length() && charsIguais == node.getKey().length()) {
-			visitor.visit(prefix, pai, node);
-		} else if (node.getKey().equals("") == true
-				|| (charsIguais < prefix.length() && charsIguais >= node.getKey().length())) {
-			String newText = prefix.substring(charsIguais, prefix.length());
-			for (RadixTreeNode<T> filho : node.getFilho()) {
-				if (filho.getKey().startsWith(newText.charAt(0) + "")) {
-					visit(newText, visitor, node, filho);
-					break;
-				}
-			}
 		}
 	}
 
