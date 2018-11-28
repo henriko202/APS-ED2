@@ -180,7 +180,7 @@ public class RadixTree<T> {
 		}
 
 		if (node.isReal() == true)
-			f.format("%s %s %s*%n", node.getKey(), node.getValue(), node.getLinhas());
+			f.format("%s %s %s%n", node.getKey(), node.getValue(), node.getLinhas());
 		else
 			f.format("%s%n", node.getKey());
 
