@@ -1,5 +1,0 @@
-Radix tree, também conhecido como árvore PATRICIA (Practical Algorithm to Retrieve Information Coded in Alphanumeric, Algorítmo prático para recuperar informação codificada em alfanumérico), é uma estrutura de espaço otimizada de uma trie, que é uma árvore de prefixos, diferente da trie, a PATRICIA guarda strings, ao invés de chars.
-
-Por exemplo, na árvore patricia, a palavra "abc" e a palavra "abd" compartilham a mesma chave(base/radix), que é "ab" porém, bifurcam em caminhos diferentes, gerando as duas palavras diferentes, numa Trie normal, seria guardada a chave "a" seguida da chave "b" e a bifurcação dos caminhos para "c" e "d", que geram as palavras, e a trie normalmente guarda a palavra inteira após essa caminhada, por exemplo, ela passa por "a" vai para "b" e então para "c", e encontra um nó com a palavra formada "abc".
-
-A árvore Radix tem esse nome, pois na matemática, um Radix é a base, ou seja, a base da palavra, que então é dividada em outras duas ou mais palavras.
